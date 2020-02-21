@@ -56,3 +56,24 @@ class ModelTests(TestCase):
         )
 
         self.assertTrue(str(tag), tag.name)
+
+    def test_ingredient_str(self):
+        """Test the ingredient str representation"""
+        ingredient = models.Ingredient.objects.create(
+            user=sample_user(),
+            name="Cucumber"
+        )
+
+        self.assertTrue(str(ingredient), ingredient.name)
+
+    def test_recipe_str(self):
+        """Test the recipe str representation
+        recipe = models.Recipe.objects.create(
+            user=sample_user(),
+            title='Stake mushroom sauce',
+            time_minutes=5,
+            price=5.00
+        )
+        self.assertTrue(str(recipe), recipe.name)
+        """
+        pass
