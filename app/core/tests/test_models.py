@@ -67,13 +67,13 @@ class ModelTests(TestCase):
         self.assertTrue(str(ingredient), ingredient.name)
 
     def test_recipe_str(self):
-        """Test the recipe str representation
+        """Test the recipe str representation"""
         recipe = models.Recipe.objects.create(
             user=sample_user(),
             title='Stake mushroom sauce',
             time_minutes=5,
             price=5.00
         )
-        self.assertTrue(str(recipe), recipe.name)
-        """
-        pass
+        self.assertTrue(str(recipe), recipe.title)
+
+
